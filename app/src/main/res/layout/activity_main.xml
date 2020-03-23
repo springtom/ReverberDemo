@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextureView
+        android:id="@+id/textureview"
+        android:layout_width="match_parent"
+        android:layout_height="220dp" />
+
+    <ScrollView
+        android:id="@+id/ll_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#B0B8D7"
+            android:paddingBottom="20dip"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="音乐音量_左声道" />
+
+            <SeekBar
+                android:id="@+id/music_bg_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="音乐音量_右声道" />
+
+            <SeekBar
+                android:id="@+id/music_bg_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="录制"></Button>
+
+                <Button
+                    android:id="@+id/but_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="切换音轨(原伴唱切换)"></Button>
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D0C6F4"
+                android:orientation="vertical"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="混响设置面板"
+                    android:textColor="#4D2BD5"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置高频衰减时间(5khz)与低频衰减时间的比值
+频率" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"></TextView>
+
+                    <com.xw.repo.BubbleSeekBar
+                        android:id="@+id/seekbar1"
+                        android:layout_width="0dip"
+                        android:layout_height="16dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2000"></TextView>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置混响电平衰减60 dB所需的时间" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"></TextView>
+
+                    <com.xw.repo.BubbleSeekBar
+                        android:id="@+id/seekbar2"
+                        android:layout_width="0dip"
+                        android:layout_height="16dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20000"></TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="控制后期混响衰减的模态密度" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"></TextView>
+
+                    <com.xw.repo.BubbleSeekBar
+                        android:id="@+id/seekbar3"
+                        android:layout_width="0dip"
+                        android:layout_height="16dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1000"></TextView>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置后期混响衰减中的回声密度" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"></TextView>
+
+                    <com.xw.repo.BubbleSeekBar
+                        android:id="@+id/seekbar4"
+                        android:layout_width="0dip"
+                        android:layout_height="16dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1000"></TextView>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置早期反射的延迟时间" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"></TextView>
+
+                    <com.xw.repo.BubbleSeekBar
+                        android:id="@+id/seekbar5"
+                        android:layout_width="0dip"
+                        android:layout_height="16dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300"></TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置后期混响的音量" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-9000"></TextView>
+
+                    <com.xw.repo.BubbleSeekBar
+                        android:id="@+id/seekbar6"
+                        android:layout_width="0dip"
+                        android:layout_height="16dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2000"></TextView>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置环境混响效果的主音量级别" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-9000"></TextView>
+
+                    <com.xw.repo.BubbleSeekBar
+                        android:id="@+id/seekbar7"
+                        android:layout_width="0dip"
+                        android:layout_height="16dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"></TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="将音量级别设置为相对于低频扬声器的音量级别为5 kHz整体混响效果" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-9000"></TextView>
+
+                    <com.xw.repo.BubbleSeekBar
+                        android:id="@+id/seekbar8"
+                        android:layout_width="0dip"
+                        android:layout_height="16dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#B0B8D7"
+                android:orientation="vertical"
+                android:padding="10dip"></LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_layout_dbb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D0C6F4"
+                android:orientation="vertical"
+                android:padding="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="重低音" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"></TextView>
+
+                    <com.xw.repo.BubbleSeekBar
+                        android:id="@+id/seekbar9"
+                        android:layout_width="0dip"
+                        android:layout_height="16dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1000"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#B0B8D7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="音场" />
+
+                <Spinner
+                    android:id="@+id/spinner_sound_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <com.aimei.voice.reverberdemo.MyVisualizerView
+                android:id="@+id/my_visualizer_view"
+                android:layout_width="match_parent"
+                android:layout_height="120dip"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>
+
+
